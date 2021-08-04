@@ -36,7 +36,7 @@ app.get('/zoomverify/verifyzoom.html', (req, res) => {
   res.send(process.env.zoom_verification_code)
 })
 
-app.post('/unsplash', (req, res) => {
+app.post('/request', (req, res) => {
 
 // First Injection point in the POST
 getChatbotToken()
@@ -63,7 +63,7 @@ function getChatbotToken () {
 // Variable body is of type object, and to get the string do, body.body which will get the JSON string
 function getMeme (chatbotToken, url) 
 {
-	request(url, (error, body) => { 
+    request(url, (error, body) => { 
     if (error) 
 	{
       console.log('Error getting photo from Unsplash.', error)
@@ -83,8 +83,8 @@ function getMeme (chatbotToken, url)
 			[
 			  {
 				'type': 'attachments',
-				'img_url': 'https://preview.redd.it/nvsjk2jnwsr41.jpg?width=640&crop=smart&auto=webp&s=7ae9716e3552b27a8b765b8c5f0f5f169437c0ff',
-				'resource_url': 'https://preview.redd.it/nvsjk2jnwsr41.jpg?width=640&crop=smart&auto=webp&s=7ae9716e3552b27a8b765b8c5f0f5f169437c0ff',
+				'img_url': 'https://photos.google.com/u/1/photo/AF1QipOP5GuLE26PIk9vaflr1dX0o0w8hMY2PSf03o2A',
+				'resource_url': 'https://photos.google.com/u/1/photo/AF1QipOP5GuLE26PIk9vaflr1dX0o0w8hMY2PSf03o2A',
 				'information': 
 				{
 				  'title': 
